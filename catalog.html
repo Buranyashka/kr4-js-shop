@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="js/catalog.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/filters.js" defer></script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bonsai Shop">
@@ -19,6 +21,18 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html" style="font-size: 32px">Bonsai Shop</a>
+
+      <button
+        class="site-nav__toggle"
+        type="button"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="site-nav__toggle-line"></span>
+        <span class="site-nav__toggle-line"></span>
+        <span class="site-nav__toggle-line"></span>
+      </button>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -41,6 +55,54 @@
 
   <main>
     <section class="catalog-layout">
+      <div class="catalog-toolbar">
+        <button class="button button--secondary" id="open-filters-btn" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;">
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+            <line x1="11" y1="18" x2="13" y2="18"></line>
+          </svg>
+          Фильтры
+        </button>
+      </div>
+
+      <aside class="catalog-filters" id="catalog-filters" aria-hidden="true">
+        <div class="catalog-filters__header">
+          <h3 class="catalog-filters__title">Фильтры</h3>
+          <button class="catalog-filters__close" id="close-filters-btn" type="button" aria-label="Закрыть фильтры">
+            &times;
+          </button>
+        </div>
+
+        <form class="filters-form">
+          <fieldset>
+            <legend>Цена, ₽</legend>
+            <div class="filters-price-row">
+              <input type="number" name="price-min" placeholder="От 0" min="0">
+              <span>—</span>
+              <input type="number" name="price-max" placeholder="До 50000" min="0">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Категория</legend>
+            <label class="filters-checkbox">
+              <input type="checkbox" name="category" value="bonsai" checked>
+              <span>Бонсай</span>
+            </label>
+          </fieldset>
+
+          <div class="filters-form__actions">
+            <button type="button" class="button button--primary">Применить</button>
+            <button type="reset" class="button button--secondary">Сбросить</button>
+          </div>
+        </form>
+      </aside>
+
+      <div class="catalog-backdrop" id="catalog-backdrop"></div>
+
+
+
       <section class="catalog-products">
         <h2>Список товаров</h2>
         <div class="products-grid"></div>
