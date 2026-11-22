@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonsai Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/index.js" defer></script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bonsai Shop">
+  <meta property="og:description" content="Интернет-магазин бонсаев.">
+  <meta property="og:image" content="https://Buranyashka.github.io/kr3-html-css-shop/images/preview.jpg">
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html" style="font-size: 32px">Bonsai Shop</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заявка</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Искусство бонсай</h1>
+        <p>
+          Добро пожаловать в Bonsai Shop. Мы предлагаем деревья, 
+          выращенные с любовью и заботой. Идеальный выбор для дома и офиса.
+        </p>
+        <a class="button" href="#popular">Перейти к товарам</a>
+      </div>
+
+      <div class="hero__image-wrapper">
+        <img class="hero__image" src="images/бонсай.jpg" alt="Красивый бонсай">
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <h2>Почему выбирают нас</h2>
+      <ul class="advantages-list">
+        <li>Гарантия приживания саженцев</li>
+        <li>Профессиональные консультации по формированию кроны</li>
+        <li>Бережная доставка по всей России</li>
+        <li>Только проверенные питомники</li>
+      </ul>
+    </section>
+    
+    <section class="section" id="popular">
+      <h2>Популярные бонсаи</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel" id="popular-carousel">
+          <p>Загрузка товаров...</p>
+        </div>
+      </div>
+
+    </section>
+
+    <aside class="aside-info">
+      <h2>Информация для студентов</h2>
+      <p>
+        Этот проект теперь использует JSON для хранения данных о товарах.
+        Карусель на главной странице динамически формируется на основе этих данных.
+      </p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+</body>
+</html>
