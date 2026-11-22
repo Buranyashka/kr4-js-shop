@@ -209,9 +209,9 @@ body {
 
 @media (max-width: 767px) {
   .product-card--carousel {
-    width: 85%;
-    min-width: 85%;
-    max-width: 85%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 }
 
